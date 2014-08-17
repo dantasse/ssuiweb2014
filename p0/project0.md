@@ -44,7 +44,7 @@ then `addHeader("foo", 4)` should add an h4 element with the text “foo”, and
 ##fibonacci(n)  (10 points)
 ###Summary:
 
-Generates a string containing the first N numbers of the [Fibonacci Sequence](http://en.wikipedia.org/wiki/Fibonacci_sequence). See  for more on the sequence. Each number in the string should be separated by commas. If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.
+Generates a string containing the first N numbers of the [Fibonacci Sequence](http://en.wikipedia.org/wiki/Fibonacci_sequence). Each number in the string should be separated by commas. If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.
 
 ###Examples:
     fibonacci(0)-> undefined
