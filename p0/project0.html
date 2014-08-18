@@ -119,34 +119,6 @@ map(oneTo5, function (x) { return x * 2 }); -&gt; [2,4,6,8,10]
 <li>return: The array that is a result of applying the function to every element in the input array. Returns undefined if parameters are invalid.</li>
 </ul>
 
-<h2>makeIterator(data)  (5 points, extra credit)</h2>
-
-<h3>Summary:</h3>
-
-<p>Returns an object which contains an array, and which has an 'each' method that applies an input function to every element in its array. NOTE: this is not quite like the previous exercise. Your each function should <em>NOT</em> return an array that is the result of applying an input function to each element in the object’s array. Instead, the each function should simply apply the input function to each element in the object’s array. In other words, your returned object should be of the form:</p>
-
-<pre><code>{
-    array: [the array that is passed in],
-    each(functionToApply): [ a function which applies the given function to the array your object contains]
-}
-</code></pre>
-
-<h3>Example:</h3>
-
-<pre><code>var oneTo5 = [1,2,3,4,5];
-var oneTo5_mod = makeIterator(oneTo5);
-var twoTo10 = [];
-oneTo5_mod.each(function (x) { twoTo10.push(2 * x) });
-twoTo10 -&gt; [2,4,6,8,10]
-</code></pre>
-
-<h3>Parameters:</h3>
-
-<ul>
-<li><code>data</code>: An Array of data that the object should store </li>
-<li>return: An object which stores the array, which contains a method called 'each' which takes a function as a parameter and applies it to each element in the data array (but does not modify the array).</li>
-</ul>
-
 <h2>runTests(10 points)</h2>
 
 <h3>Summary:</h3>
@@ -159,7 +131,7 @@ twoTo10 -&gt; [2,4,6,8,10]
 
 <h2>Grading</h2>
 
-<p>Your program will be run on my machine against test cases unknown to you. If your functions performs properly, are well structured, and well documented you will receive 10 points for each exercise. </p>
+<p>Your program will be run on my machine against test cases unknown to you. If your functions perform properly, are well structured, and well documented you will receive 10 points for each exercise. </p>
 
 <p>You will be graded on the quality of your code and commenting. This will include factors such as modularity, sensible method and variable names, and overall clarity. You may find these references useful: 
 <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google style guide</a>

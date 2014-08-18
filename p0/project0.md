@@ -39,7 +39,7 @@ then `addHeader("foo", 4)` should add an h4 element with the text “foo”, and
 ###Parameters:
 - `content`: the text content of the header
 - `level`: the level of the header (can be from 1 to 5). If the value is not a valid number or the passed in parameter is too high, defaults to h3.
-
+- return: undefined (i.e. just type in 'return').
 
 ##fibonacci(n)  (10 points)
 ###Summary:
@@ -84,26 +84,6 @@ Applies a function to every element in an array and returns the resulting array.
 - `functionToApply`: the function to apply. 
 - return: The array that is a result of applying the function to every element in the input array. Returns undefined if parameters are invalid.
 
-##makeIterator(data)  (5 points, extra credit)
-###Summary:
-
-Returns an object which contains an array, and which has an 'each' method that applies an input function to every element in its array. NOTE: this is not quite like the previous exercise. Your each function should *NOT* return an array that is the result of applying an input function to each element in the object’s array. Instead, the each function should simply apply the input function to each element in the object’s array. In other words, your returned object should be of the form:
-    
-    {
-	    array: [the array that is passed in],
-	    each(functionToApply): [ a function which applies the given function to the array your object contains]
-    }
-###Example:
-    var oneTo5 = [1,2,3,4,5];
-    var oneTo5_mod = makeIterator(oneTo5);
-    var twoTo10 = [];
-    oneTo5_mod.each(function (x) { twoTo10.push(2 * x) });
-    twoTo10 -> [2,4,6,8,10]
-
-###Parameters: 
-- `data`: An Array of data that the object should store 
-- return: An object which stores the array, which contains a method called 'each' which takes a function as a parameter and applies it to each element in the data array (but does not modify the array).
-
 ##runTests(10 points)
 ###Summary:
 This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).
@@ -113,7 +93,7 @@ This function should test each of the above functions. In other words, you shoul
 Make sure to comment all of your code and to write good code because you will be graded both for your comments and your coding style.
 
 ## Grading
-Your program will be run on my machine against test cases unknown to you. If your functions performs properly, are well structured, and well documented you will receive 10 points for each exercise. 
+Your program will be run on my machine against test cases unknown to you. If your functions perform properly, are well structured, and well documented you will receive 10 points for each exercise. 
 
 You will be graded on the quality of your code and commenting. This will include factors such as modularity, sensible method and variable names, and overall clarity. You may find these references useful: 
 [Google style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)

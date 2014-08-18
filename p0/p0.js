@@ -10,11 +10,13 @@ Modified :
 */
 
 /*
-* Summary:      Adds a header element to the body of the html document with the specified level and content
-* Parameters:   content: the text content of the header
-*               level: the level of the header (can be from h1 to h5). If the value is not a valid number
-*               or the passed in parameter is too high, defaults to h3.
-* Return:       undefined (i.e. just type in 'return').
+* Summary: Adds a header element to the body of the html document with the
+*   specified level and content.
+* Parameters:
+*   content: the text content of the header
+*   level: the level of the header (can be from h1 to h5). If the value is not
+*       a valid number or the passed in parameter is too high, defaults to h3.
+* Return: undefined (i.e. just type in 'return').
 */
 function addHeader() {
 
@@ -32,7 +34,7 @@ function fibonacci() {
 * Function description.
 * You may need to add parameters to the function
 */
-function findNumbersInStr() {
+function addUpNumbers() {
 
 } // end findNumbersInStr
 
@@ -43,14 +45,6 @@ function findNumbersInStr() {
 function map() {
 
 } // end map
-
-/*
-* Function description.
-* You may need to add parameters to the function
-*/
-function makeIterator() {
-
-} // end makeIterator
 
 /*
 * Function description
