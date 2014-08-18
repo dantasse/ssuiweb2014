@@ -44,29 +44,34 @@ then `addHeader("foo", 4)` should add an h4 element with the text “foo”, and
 ##fibonacci(n)  (10 points)
 ###Summary:
 
-Generates a string containing the first N numbers of the [Fibonacci Sequence](http://en.wikipedia.org/wiki/Fibonacci_sequence). Each number in the string should be separated by commas. If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.
+Generates an array containing the first N numbers of the [Fibonacci Sequence](http://en.wikipedia.org/wiki/Fibonacci_sequence). If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.
 
 ###Examples:
     fibonacci(0)-> undefined
-    fibonacci(1)->"0"
-    fibonacci(2)->"0,1"
-    fibonacci(7)->"0,1,1,2,3,5,8"
+    fibonacci(1)->[0]
+    fibonacci(2)->[0,1]
+    fibonacci(7)->[0,1,1,2,3,5,8]
     fibonacci(-1)-> undefined
     fibonacci("invalid")-> undefined
 
 ###Parameters: 
-- `n`: the number of Fibonacci numbers to generate. If n is invalid, returns undefined.
-- return: A comma separated string (not array) of the first n Fibonacci numbers. If n is invalid, returns undefined.
+- `n`: the number of Fibonacci numbers to generate.
+- return: An array of the first n Fibonacci numbers. If n is invalid, returns undefined.
 
-##findNumbersInStr(strToParse)  (10 points)
+##addUpNumbers(str)  (10 points)
 ###Summary:
-Takes in a string of numbers separated by spaces and returns an array containing only the numbers in the string AS NUMBERS (not strings). You may assume that only numbers are passed into the string.
+Takes in a string and returns the sum of every number in that string. Words, blank space, and things that do not start with a number are ignored. Returns 0 if there are no numbers in the string or if the argument is not a string.
 
-###Example: 
-    findNumbersInStr(“5 1 2 3 4 5 42")-> [5,1,2,3,4,5,42]
+###Examples: 
+    addUpNumbers("5 3 7") -> 15
+    addUpNumbers("5000 Forbes Ave, Pittsburgh PA 15213") -> 20213
+    addUpNumbers("Andre 3000, 311, and 10000 Maniacs") -> 13311
+    addUpNumbers("U2") -> 0
+    addUpNumbers("2 Fast 2 Furious") -> 4
+
 ###Parameters: 
-- `strToParse`: The string to parse which contains one or more numbers. 
-- return: An array containing all numbers that are present in the string. If the input is not a string, returns undefined.
+- `str`: The string to parse which contains one or more numbers. 
+- return: The sum of all the numbers in the string.
 
 ##map(array, functionToApply) (10 points)
 ###Summary:
@@ -101,7 +106,7 @@ Returns an object which contains an array, and which has an 'each' method that a
 
 ##runTests(10 points)
 ###Summary:
-This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader  to output your results).
+This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).
 
 ## Other notes
 

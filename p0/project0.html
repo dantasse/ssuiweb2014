@@ -58,14 +58,14 @@
 
 <h3>Summary:</h3>
 
-<p>Generates a string containing the first N numbers of the <a href="http://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci Sequence</a>. Each number in the string should be separated by commas. If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.</p>
+<p>Generates an array containing the first N numbers of the <a href="http://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci Sequence</a>. If the parameters passed are invalid (smaller than one or not a number), the function should return undefined.</p>
 
 <h3>Examples:</h3>
 
 <pre><code>fibonacci(0)-&gt; undefined
-fibonacci(1)-&gt;"0"
-fibonacci(2)-&gt;"0,1"
-fibonacci(7)-&gt;"0,1,1,2,3,5,8"
+fibonacci(1)-&gt;[0]
+fibonacci(2)-&gt;[0,1]
+fibonacci(7)-&gt;[0,1,1,2,3,5,8]
 fibonacci(-1)-&gt; undefined
 fibonacci("invalid")-&gt; undefined
 </code></pre>
@@ -73,26 +73,30 @@ fibonacci("invalid")-&gt; undefined
 <h3>Parameters:</h3>
 
 <ul>
-<li><code>n</code>: the number of Fibonacci numbers to generate. If n is invalid, returns undefined.</li>
-<li>return: A comma separated string (not array) of the first n Fibonacci numbers. If n is invalid, returns undefined.</li>
+<li><code>n</code>: the number of Fibonacci numbers to generate.</li>
+<li>return: An array of the first n Fibonacci numbers. If n is invalid, returns undefined.</li>
 </ul>
 
-<h2>findNumbersInStr(strToParse)  (10 points)</h2>
+<h2>addUpNumbers(str)  (10 points)</h2>
 
 <h3>Summary:</h3>
 
-<p>Takes in a string of numbers separated by spaces and returns an array containing only the numbers in the string AS NUMBERS (not strings). You may assume that only numbers are passed into the string.</p>
+<p>Takes in a string and returns the sum of every number in that string. Words, blank space, and things that do not start with a number are ignored. Returns 0 if there are no numbers in the string or if the argument is not a string.</p>
 
-<h3>Example:</h3>
+<h3>Examples:</h3>
 
-<pre><code>findNumbersInStr(“5 1 2 3 4 5 42")-&gt; [5,1,2,3,4,5,42]
+<pre><code>addUpNumbers("5 3 7") -&gt; 15
+addUpNumbers("5000 Forbes Ave, Pittsburgh PA 15213") -&gt; 20213
+addUpNumbers("Andre 3000, 311, and 10000 Maniacs") -&gt; 13311
+addUpNumbers("U2") -&gt; 0
+addUpNumbers("2 Fast 2 Furious") -&gt; 4
 </code></pre>
 
 <h3>Parameters:</h3>
 
 <ul>
-<li><code>strToParse</code>: The string to parse which contains one or more numbers. </li>
-<li>return: An array containing all numbers that are present in the string. If the input is not a string, returns undefined.</li>
+<li><code>str</code>: The string to parse which contains one or more numbers. </li>
+<li>return: The sum of all the numbers in the string.</li>
 </ul>
 
 <h2>map(array, functionToApply) (10 points)</h2>
@@ -147,7 +151,7 @@ twoTo10 -&gt; [2,4,6,8,10]
 
 <h3>Summary:</h3>
 
-<p>This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader  to output your results).</p>
+<p>This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).</p>
 
 <h2>Other notes</h2>
 
