@@ -107,7 +107,7 @@ The program is due Thursday, September 12, 2013 at 10:30 am.
     2. p0.html
     3. README.txt, which mentions any online sources you used to help with the project, as well as any notes about your programs (i.e. if you couldn’t get a particular part of the project to work)
 2. Zip them together into a file named `LASTNAME_FIRSTNAME_P#.zip`. For example, `tasse_dan_p0.zip`.
-3. Email that zip file to me at `dantasse@cmu.edu`. Make the Subject line start with `[ssui web p0]`. (you can send me multiple emails, I'll just take the last one.)
+3. Hand them in on Blackboard.
 
 You will lose 3 points if your submission is not in the correct format.
 
