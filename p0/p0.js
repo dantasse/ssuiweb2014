@@ -20,7 +20,7 @@ Modified :
 */
 function addHeader() {
 
-} // end addHeader
+}
 
 /*
 * Function description.
@@ -28,7 +28,7 @@ function addHeader() {
 */
 function fibonacci() {
 
-} // end fibonacci
+}
 
 /*
 * Function description.
@@ -36,7 +36,7 @@ function fibonacci() {
 */
 function addUpNumbers() {
 
-} // end findNumbersInStr
+}
 
 /*
 * Function description.
@@ -44,14 +44,14 @@ function addUpNumbers() {
 */
 function map() {
 
-} // end map
+}
 
 /*
 * Function description
 */
 function runTests(){
 
-} // end runTests
+}
 
 // To run your tests when the window loads, uncomment the code below:
 /*
