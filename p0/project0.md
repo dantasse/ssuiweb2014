@@ -88,16 +88,37 @@ Applies a function to every element in an array and returns the resulting array.
 ###Summary:
 This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).
 
-## Other notes
-
-Make sure to comment all of your code and to write good code because you will be graded both for your comments and your coding style.
-
 ## Grading
-Your program will be run on my machine against test cases unknown to you. If your functions perform properly, are well structured, and well documented you will receive 10 points for each exercise. 
-
-You will be graded on the quality of your code and commenting. This will include factors such as modularity, sensible method and variable names, and overall clarity. You may find these references useful: 
+Your program will be run on my machine against test cases unknown to you. Each function will be worth 10 points - 7 for working correctly, and 3 for style and code quality. This will include factors such as modularity, comments, sensible method and variable names, and overall clarity. You may find these references useful: 
 [Google style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
 [Another blog post](http://particletree.com/features/successful-strategies-for-commenting-code)
+
+### Good example
+    /**
+     * Doubles a number.
+     * @param {number} num the number to be doubled.
+     * @return {number} A number twice as big as num.
+     */
+    var double = function(num) {
+        return num * 2;
+    };
+
+(this is a toy example; I won't ding you if you write a super-simple thing like
+"double" without extensive JSDoc-type comments - it should be self-explanatory.
+But this is a good way to be super explicit.)
+
+### Bad example
+    // does some stuff    
+    var Double = function(x) {
+        return x * 2 // multiply by two
+    }
+(violates style guide for function naming, missing semicolons, redundant and
+vague comments)
+
+Developers argue about code readability for days. I'm not going to get into
+long arguments about style; the point is, I should be able to read your code
+and quickly know what's going on, even if your program were to grow a lot
+bigger.
 
 ##Turning Your Program In
 The program is due Thursday, September 12, 2013 at 10:30 am.
