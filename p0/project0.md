@@ -109,7 +109,7 @@ But this is a good way to be super explicit.)
 
 ### Bad example
     // does some stuff    
-    var Double = function(x) {
+    var d = function(x) {
         return x * 2 // multiply by two
     }
 (violates style guide for function naming, missing semicolons, redundant and
@@ -133,4 +133,4 @@ The program is due Thursday, September 12, 2013 at 10:30 am.
 You will lose 3 points if your submission is not in the correct format.
 
 ##Late Policy
-Each 24 hrs late (max 3) 10% will be deducted from your assignment grade.
+Each 24 hrs late 10% will be deducted from your assignment grade. After 3 days late I will not accept assignments anymore.
