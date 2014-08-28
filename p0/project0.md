@@ -8,10 +8,10 @@ Due: Thursday, September 11, 2014 by 10:30 am
 The goal of this project is to give you practice with JavaScript by completing a few small exercises.
 
 ## Files Provided
-The following files are available here:
+The following files are available here. Right click and save-as to save them to your machine and start working:
 
-- [p0.js](p0.js): javascript file that you will need to edit
-- [p0.html](p0.html): html file that loads the p0 javascript file for testing 
+- [p0.js](p0.js): javascript file that you will need to edit.
+- [p0.html](p0.html): html file that loads the p0 javascript file for testing (it will look like a blank file. Right click and View Page Source to see the code there.)
 
 ## Project Overview
 For this project, modify p0.js by adding the functions below. Each function should behave as specified. You should also add a test function called runTests() which tests the functions that you wrote. The functions you need to define are below. You can 'run' your javascript file using p0.html. See the very last few lines of p0.js to see how you can easily call runTests once the p0.html page has loaded. IMPORTANT: Make sure your function names are correct!
