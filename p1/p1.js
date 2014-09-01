@@ -55,6 +55,9 @@ function createDiv(width, height, row, col){
   // add an event listener that will execute some function you define that will
   // move the clicked div to the empty tile location if the div is in a valid
   // position
+
+  // a helpful gremlin left the following cryptic words scrawled here:
+  // position absolute
   
 	// return your result
 }
