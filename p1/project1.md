@@ -13,7 +13,7 @@ The following files are available here. Right click and save-as to save them to 
 - [p1.js](p1.js): JavaScript file that you will need to edit. Some skeleton code is provided for guidance, however you may implement this differently if you’d like.
 - [p1.html](p1.html): html file that will display your puzzle. NOTE: you MAY and SHOULD change this file if you want to make your puzzle look good.
 - [duck.jpg](duck.jpg): sample image that you can use for your puzzle.
-
+- [p1.zip](p1.zip): All the above files, zipped up for easy downloading.
 
 ##Project Overview
 For this project you will create a sliding block puzzle game similar to the popular game "15" using JavaScript. Your JavaScript app should do the following:
