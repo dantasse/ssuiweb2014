@@ -7,20 +7,24 @@ Modified :
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 */
 
-var _image_path = "img1.jpg";
-var _image_width =  640;
-var _image_height = 480;
+var IMAGE_PATH = "duck.jpg";
+var IMAGE_WIDTH =  690;
+var IMAGE_HEIGHT = 472;
+// Change these if you use your own image.
 
-var _num_rows = 4;
-var _num_cols = 4;
+var NUM_ROWS = 4;
+var NUM_COLS = 4;
 
-var _empty_tile = {row:0, col: 0};
+// Location of the empty tile:
+var emptyRow = 0;
+var emptyCol = 0;
+
 
 // Add any other global variables you may need here.
 
-/*
- * Summary: 
- * Returns:
+/**
+ * Creates all the tiles necessary.
+ * @return undefined
  */
 function createTiles(){
   // figure out how wide and tall each tile should be
@@ -29,55 +33,51 @@ function createTiles(){
   // createDiv. Remember to leave one out for the empty tile
   
   // hint: you can use document.body.appendchild
-	
-  // set the empty tile location
 }
 
-/*
- * Summary: Should return a div with the specified width and height 
- * and put it at the supplied row and column
- * Parameters:
- * Returns: The div you created
+/**
+ * Returns a div with the specified width and height and puts it at the
+ * supplied row and column.
+ * @param width Fill in what each of these parameters mean!
+ * @param height
+ * @param row
+ * @param col
+ * @return The div you created
  */
 function createDiv(width, height, row, col){
   // create your div and set its size & position attributes
   // based on parameters
 	
   // Set the div's background
-  // hint: css sprites (tutorial: http://css-tricks.com/158-css-sprites/) are a really
+  // hint: css sprites (tutorial: http://css-tricks.com/css-sprites/) are a really
   // nice way to show only a portion of an image on a tile. 
-	
 
-  // add an event handler that will execute some function you define that will move the 
-  // clicked div to the empty tile location if the div is in a valid position
+  // add an event listener that will execute some function you define that will
+  // move the clicked div to the empty tile location if the div is in a valid
+  // position
   
 	// return your result
 }
 
-/*
- * Summary: Example function that could get called when a tile is clicked.
- * Parameters:
+/**
+ * Example function that could get called when a tile is clicked.
+ * @param Add whatever params you need!
+ * @return Fill in what the function returns here!
  */
-function tileClicked(sender, event){
+function tileClicked(){
   // check if the tile can move to the empty spot
   // if the tile can move, move the tile to the empty spot
 }
 
-/*
- * Summary: Shuffle up the tiles in the beginning of the game
+/**
+ * Shuffle up the tiles in the beginning of the game
+ * @return
  */
 function shuffleTiles(){
 
 }
 
-/*
- * Summary: Generates a random puzzle
- */
-function generateRandomPuzzle(){
-
-}
-
-/*
+/**
  * When the page loads, create our puzzle
  */
 window.onload = function () {
