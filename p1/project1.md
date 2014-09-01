@@ -5,7 +5,7 @@
 Due: Wednesday, September 17, 2013 by 8:00pm
 
 ##Goal
-The goal of this project is to make a sliding puzzle game similar to the game ["15" (example here](http://mypuzzle.org/sliding), or you may have played with a plastic version). This will give you more familiarity with javascript, get you comfortable creating and manipulating DOM elements
+The goal of this project is to make a sliding puzzle game similar to the game ["15" (example here](http://mypuzzle.org/sliding), or you may have played with a plastic version). This will give you more familiarity with javascript, get you comfortable creating and manipulating DOM elements, and a little bit of event handling.
 
 ##Files Provided
 The following files are available here. Right click and save-as to save them to your machine and start working.
