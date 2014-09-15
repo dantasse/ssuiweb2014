@@ -1,0 +1,6 @@
+.tictactoe_spot {
+    color: red;
+    font-size: 48pt;
+    font-family: Courier;
+    padding: 10px 8px;
+}
