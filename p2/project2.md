@@ -1,3 +1,5 @@
+<link href="../stylesheets/GitHub2.css" rel="stylesheet"></link>
+
 ### 05-633D Web Lab
 # Project 2: Your Own `<canvas>` Drawing Library
 Due: Wednesday, October 1, 2014 by 8:00pm
