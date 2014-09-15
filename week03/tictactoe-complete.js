@@ -2,7 +2,7 @@
 'use strict';
 
 var gameState = {
-  board: [['x','o','_'], ['_', '_', 'x'],['_', '_', '_']],
+  board: [['_','_','_'], ['_', '_', '_'],['_', '_', '_']],
   turn: 'x',
   gameOver: false
 }
@@ -19,8 +19,9 @@ var spotClickedGen = function(row, col) {
       gameState.board[row][col] = 'o';
       gameState.turn = 'x';
     }
-    // TODO Check if someone wins?
-    document.body.innerHTML = ''; // Not an awesome way to clear the board.
+    // TODO Check if someone wins. End the game if so.
+    document.body.innerHTML = ''; // Not an awesome way to clear the board,
+    // but it works here...
     displayBoard(gameState);
   }
 }
