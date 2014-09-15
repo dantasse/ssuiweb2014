@@ -4,6 +4,8 @@
 
 <h1>Project 2: Your Own <code>&lt;canvas&gt;</code> Drawing Library</h1>
 
+<p><img src="title.png" width="400" height="100" /></p>
+
 <p>Due: Wednesday, October 1, 2014 by 8:00pm</p>
 
 <h2>Goal</h2>
@@ -15,14 +17,14 @@
 <p>The following files are in the same .zip folder as this project description was in:</p>
 
 <ul>
-<li>doodle-library-skeleton.js: Skeleton code for the JavaScript library you will be creating.</li>
-<li>utils.js: Utility functions that have been provided for you.</li>
-<li>primitive-test.html: HTML file that is provided for you to test your library.</li>
-<li>primitive-test.js: JavaScript file that is provided for you to test your library.</li>
-<li>container-test.html: HTML file that is provided for you to test your library.</li>
-<li>container-test.js: JavaScript file that is provided for you to test your library.</li>
-<li>primitives.png: Screenshot of test output for first part of tests (i.e. simple primitives)</li>
-<li>containers.png: Screenshot of text output for second part of tests (i.e. complex containers)</li>
+<li><a href="doodle-library.js">doodle-library.js</a>: Skeleton code for the JavaScript library you will be creating.</li>
+<li><a href="utils.js">utils.js</a>: Utility functions that have been provided for you.</li>
+<li><a href="primitive-test.html">primitive-test.html</a>: HTML file that is provided for you to test your library.</li>
+<li><a href="primitive-test.js">primitive-test.js</a>: JavaScript file that is provided for you to test your library.</li>
+<li><a href="container-test.html">container-test.html</a>: HTML file that is provided for you to test your library.</li>
+<li><a href="container-test.js">container-test.js</a>: JavaScript file that is provided for you to test your library.</li>
+<li><a href="primitives.png">primitives.png</a>: Screenshot of test output for first part of tests (i.e. simple primitives)</li>
+<li><a href="containers.png">containers.png</a>: Screenshot of text output for second part of tests (i.e. complex containers)</li>
 </ul>
 
 <h2>Project Overview</h2>
@@ -38,6 +40,8 @@
 <p>Every drawable object in a doodle has left and top coordinates. Left and top specify the reference frame for the object; when the object draws itself, it treats its left and top as the origin, (0, 0). Therefore, x and y coordinates in the attributes for an object, such as a line or a path, are relative to the object’s left and top.</p>
 
 <p>For example, the figure below shows a container with a single child container. The child container has a left and top of (10, 10), so it is drawn at (10, 10) in the parent’s coordinate system. The line inside the child container, however, treats the left, top point of the container as (0, 0) when drawing its endpoints.</p>
+
+<p><img src="reference_frames.png" alt="Containers and reference frames" title="" /></p>
 
 <p>When a container object (such as a Doodle or Container object) draws one of its child elements, it first translates and rotates the child element according to the child’s left and top attributes. It then calls the child’s draw function.
 The following are specifications for the objects you must implement. Stubs for these objects are provided in the starter code.</p>
@@ -96,7 +100,7 @@ The following are specifications for the objects you must implement. Stubs for t
 
 <p>Inherits from: Drawable</p>
 
-<p>A DoodleImage object draws an image.</p>
+<p>A DoodleImage object draws an image. This may be a bit trickier than the other primitives to implement, because it has to load the image file before being drawn. You can get around this by making draw() wait until the image is loaded, or by making the whole Doodle wait to be drawn until all the images are loading. Your solution here might be a little hacky, that's ok.</p>
 
 <p>Constructor Parameter:</p>
 
@@ -147,9 +151,9 @@ The following are specifications for the objects you must implement. Stubs for t
 
 <h4>Rectangle</h4>
 
-<p>Inherits from: Primitive (implemented for you)</p>
+<p>Inherits from: Primitive (already implemented for you)</p>
 
-<p>Draws a rectangle</p>
+<p>Draws a rectangle (not filled in).</p>
 
 <p>Constructor Parameter:</p>
 
@@ -160,7 +164,7 @@ The following are specifications for the objects you must implement. Stubs for t
 <p>Methods (in addition to those specified by ancestors):</p>
 
 <ul>
-<li>draw: Draw the rectangle as specified by x, y, width, and height</li>
+<li>draw: Draw the rectangle as specified by x, y, width, and height. (just the outline, not filled in.)</li>
 </ul>
 
 <p>Fields (in addition to those specified by ancestors):</p>

@@ -2,22 +2,23 @@
 
 ### 05-633D Web Lab
 # Project 2: Your Own `<canvas>` Drawing Library
-Due: Wednesday, October 1, 2014 by 8:00pm
+<img src="title.png" width="400" height="100" />
 
+Due: Wednesday, October 1, 2014 by 8:00pm
 ## Goal
 The goal of this project is to create a re-usable drawing library for creating interactive content on the `<canvas>` tag. Some pre-existing libraries are [Raphael](http://raphaeljs.com), [Processing](http://processingjs.org), and [fabric.js](http://fabricjs.com/). For this project, you’re going to write your own drawing library, and then use this library to create an interesting doodle of your own!
 
 ## Files Provided
 The following files are in the same .zip folder as this project description was in:
 
-- doodle-library-skeleton.js: Skeleton code for the JavaScript library you will be creating.
-- utils.js: Utility functions that have been provided for you.
-- primitive-test.html: HTML file that is provided for you to test your library.
-- primitive-test.js: JavaScript file that is provided for you to test your library.
-- container-test.html: HTML file that is provided for you to test your library.
-- container-test.js: JavaScript file that is provided for you to test your library.
-- primitives.png: Screenshot of test output for first part of tests (i.e. simple primitives)
-- containers.png: Screenshot of text output for second part of tests (i.e. complex containers)
+- [doodle-library.js](doodle-library.js): Skeleton code for the JavaScript library you will be creating.
+- [utils.js](utils.js): Utility functions that have been provided for you.
+- [primitive-test.html](primitive-test.html): HTML file that is provided for you to test your library.
+- [primitive-test.js](primitive-test.js): JavaScript file that is provided for you to test your library.
+- [container-test.html](container-test.html): HTML file that is provided for you to test your library.
+- [container-test.js](container-test.js): JavaScript file that is provided for you to test your library.
+- [primitives.png](primitives.png): Screenshot of test output for first part of tests (i.e. simple primitives)
+- [containers.png](containers.png): Screenshot of text output for second part of tests (i.e. complex containers)
 
 ## Project Overview
 This project has two parts. The first part is to create a drawing library for `<canvas>` that provides a few basic functions to make drawing using canvas easier. The second part is to use your library to create a cool doodle (ideas at [http://www.google.com/logos/](http://www.google.com/logos/)). 
@@ -30,6 +31,8 @@ Your objects will need to follow a specific layout protocol. There is a root ent
 Every drawable object in a doodle has left and top coordinates. Left and top specify the reference frame for the object; when the object draws itself, it treats its left and top as the origin, (0, 0). Therefore, x and y coordinates in the attributes for an object, such as a line or a path, are relative to the object’s left and top.
 
 For example, the figure below shows a container with a single child container. The child container has a left and top of (10, 10), so it is drawn at (10, 10) in the parent’s coordinate system. The line inside the child container, however, treats the left, top point of the container as (0, 0) when drawing its endpoints.
+
+![Containers and reference frames](reference_frames.png)
 
 When a container object (such as a Doodle or Container object) draws one of its child elements, it first translates and rotates the child element according to the child’s left and top attributes. It then calls the child’s draw function.
 The following are specifications for the objects you must implement. Stubs for these objects are provided in the starter code.
@@ -73,7 +76,7 @@ Fields (in addition to those specified by ancestors):
 #### DoodleImage
 Inherits from: Drawable
 
-A DoodleImage object draws an image.
+A DoodleImage object draws an image. This may be a bit trickier than the other primitives to implement, because it has to load the image file before being drawn. You can get around this by making draw() wait until the image is loaded, or by making the whole Doodle wait to be drawn until all the images are loading. Your solution here might be a little hacky, that's ok.
 
 Constructor Parameter:
 
@@ -110,9 +113,9 @@ Fields (in addition to those specified by ancestors):
 - endY: Ending y coordinate of line. Must be >=0.
 
 #### Rectangle
-Inherits from: Primitive (implemented for you)
+Inherits from: Primitive (already implemented for you)
 
-Draws a rectangle
+Draws a rectangle (not filled in).
 
 Constructor Parameter:
 
@@ -120,7 +123,7 @@ Constructor Parameter:
 
 Methods (in addition to those specified by ancestors):
 
-- draw: Draw the rectangle as specified by x, y, width, and height
+- draw: Draw the rectangle as specified by x, y, width, and height. (just the outline, not filled in.)
 
 Fields (in addition to those specified by ancestors):
 
