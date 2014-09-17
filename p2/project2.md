@@ -9,7 +9,6 @@ Due: Wednesday, October 1, 2014 by 8:00pm
 The goal of this project is to create a re-usable drawing library for creating interactive content on the `<canvas>` tag. Some pre-existing libraries are [Raphael](http://raphaeljs.com), [Processing](http://processingjs.org), and [fabric.js](http://fabricjs.com/). For this project, you’re going to write your own drawing library, and then use this library to create an interesting doodle of your own!
 
 ## Files Provided
-The following files are in the same .zip folder as this project description was in:
 
 - [doodle-library.js](doodle-library.js): Skeleton code for the JavaScript library you will be creating.
 - [utils.js](utils.js): Utility functions that have been provided for you.
@@ -19,6 +18,8 @@ The following files are in the same .zip folder as this project description was 
 - [container-test.js](container-test.js): JavaScript file that is provided for you to test your library.
 - [primitives.png](primitives.png): Screenshot of test output for first part of tests (i.e. simple primitives)
 - [containers.png](containers.png): Screenshot of text output for second part of tests (i.e. complex containers)
+- [cherry.jpg](cherry.jpg) and [kitty.jpg](kitty.jpg) Pictures for the tests.
+- [p2.zip](p2.zip) - all of the above plus this handout.
 
 ## Project Overview
 This project has two parts. The first part is to create a drawing library for `<canvas>` that provides a few basic functions to make drawing using canvas easier. The second part is to use your library to create a cool doodle (ideas at [http://www.google.com/logos/](http://www.google.com/logos/)). 
