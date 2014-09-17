@@ -186,17 +186,16 @@ This project has the same procedure as Projects 0 and 1. Make sure to include th
 - container-test.js: Keep all of the test files
 - README.txt
 
-The project is due Wednesday, October 1, 2013 at 8:00 pm. You should turn in your assignment via Blackboard, attaching a zip file with the contents below. Please write a README.txt file which mentions any online sources you used to help with the project, as well as any notes about your programs (i.e. if you couldn’t get a particular part of the project to work). Name the file `lastname_firstname_P#.zip`.  For example: `tasse_dan_p2.zip`
+The project is due Wednesday, October 1, 2014 at 8:00 pm. You should turn in your assignment via Blackboard, attaching a zip file with the contents below. Please write a README.txt file which mentions any online sources you used to help with the project, as well as any notes about your programs (i.e. if you couldn’t get a particular part of the project to work). Name the file `lastname_firstname_P#.zip`.  For example: `tasse_dan_p2.zip`
 
 ###Grading
 Your assignment will be graded as follows:
 
 - Turn in is correct, code has no syntax errors: 5 pts
-- Correct implementation of classes related to container: 15 pts
+- Correct implementation of classes related to container: 10 pts
 - Aesthetics of your doodle: 5 pts
-- Use of inheritance, elegance of code: 10 pts
+- Use of inheritance: 5 pts
 - Correct implementation of non-container classes: 15 pts
-- Bells and whistles: 5 – 10 pts
 - Formatting, comments and coding style: 5 pts
-
+- Bells and whistles: 5 – 10 pts
 
