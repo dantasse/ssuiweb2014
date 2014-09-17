@@ -46,7 +46,7 @@ Constructor Parameter:
 
 Methods:
 
-- draw: Draws its children. If a child is not visible, does not draw the child. 
+- draw: Draws its children. If a child is not visible, does not draw the child. Scales, translates, and rotates the child according to the child's scale, (left, top), and theta variables.
 
 Fields:
 
@@ -143,7 +143,7 @@ Constructor Parameter:
 
 Methods:
 
-- draw: Draws itself and its children. If a child is not visible (visible property set to false), does not draw it.
+- draw: Draws itself and its children. If a child is not visible (visible property set to false), does not draw it. Scales, translates, and rotates children according to each child's scale, (left, top), and theta values.
 
 Fields (in addition to those specified by ancestors):
 
