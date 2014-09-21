@@ -188,7 +188,7 @@ window.onload = function () {
   }
 
   // Write some text.
-  var text = new Text({ left: 360, height: 440, content: "Om nom nom" });
+  var text = new Text({ left: 360, top: 440, content: "Om nom nom" });
 
   doodle.children.push(text);
   
