@@ -87,7 +87,9 @@ Applies a function to every element in an array and returns the resulting array.
 
 ##runTests(10 points)
 ###Summary:
-This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).
+This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results). This function should also output what the test is supposed to return, so you can tell at a glance whether your test passed or not.  One way you can do so is like so:
+
+    "fibonacci(5), should be [0,1,1,2,3], was: " + fibonacci(5)
 
 ## Grading
 Your program will be run on my machine against test cases unknown to you. Each function will be worth 10 points - 7 for working correctly, and 3 for style and code quality. This will include factors such as modularity, comments, sensible method and variable names, and overall clarity. You may find these references useful: 

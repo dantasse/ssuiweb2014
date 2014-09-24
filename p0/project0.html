@@ -125,7 +125,10 @@ map(oneTo5, function (x) { return x * 2 }); -&gt; [2,4,6,8,10]
 
 <h3>Summary:</h3>
 
-<p>This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results).</p>
+<p>This function should test each of the above functions. In other words, you should verify that the above functions behave as specified by using output statements. You should also check for edge cases. For each above function, write at least three tests per function. You can either output results to the chrome debugger using console.log(message), or output to the actual webpage (hint: you can use addHeader to output your results). This function should also output what the test is supposed to return, so you can tell at a glance whether your test passed or not.  One way you can do so is like so:</p>
+
+<pre><code>"fibonacci(5), should be [0,1,1,2,3], was: " + fibonacci(5)
+</code></pre>
 
 <h2>Grading</h2>
 
