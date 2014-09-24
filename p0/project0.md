@@ -68,6 +68,7 @@ Takes in a string and returns the sum of every number in that string. Words, bla
     addUpNumbers("Andre 3000, 311, and 10000 Maniacs") -> 13311
     addUpNumbers("U2") -> 0
     addUpNumbers("2 Fast 2 Furious") -> 4
+    addUpNumbers("Windows 3.1 and 95") -> 98.1
 
 ###Parameters: 
 - `str`: The string to parse which contains one or more numbers. 
