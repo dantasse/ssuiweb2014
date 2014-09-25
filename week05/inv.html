@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <script>
+    var shoutWord = function(word) {
+      alert(word);
+    }
+    var Investment = function(name, numUnits, pricePer) {
+      this.name = name;
+      this.numUnits = numUnits;
+      this.pricePer = pricePer;
+    }
+    
+    Investment.prototype.totalVal = function() {
+      return this.numUnits * this.pricePer;
+    }
+    Investment.prototype.x = 5;
+    
+    var Stock = function(name, compName, numUnits, pricePer) {
+      Investment.call(this, name, numUnits, pricePer);
+      this.compName = compName;
+    }
+    Stock.prototype = new Investment();
+    Stock.prototype.parent = Investment.prototype;
+    Stock.prototype.x = 10
+    Stock.prototype.totalVal = function() {
+      return this.numUnits * this.pricePer *1.1;
+    }
+    
+      
+    var stock1 = new Stock("my apple stock", "apple", 10, 5);
+    console.log(stock1.parent.x);
+    console.log(stock1.x);
+    var stock2 = new Stock("my msft stock", "microsoft", 20, 10);
+    console.log(stock1.totalVal());
+
+    var func = function() {
+      this.x ++;
+    }
+    obj = {a:2, b:3, x:10};
+    
+    func();
+    func.call(obj);
+  </script>
+</head>
+<body>
+</body>
+</html>

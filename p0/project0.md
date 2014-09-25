@@ -76,7 +76,7 @@ Takes in a string and returns the sum of every number in that string. Words, bla
 
 ##map(array, functionToApply) (10 points)
 ###Summary:
-Applies a function to every element in an array and returns the resulting array.
+Applies a function to every element in an array and returns the resulting array. Make a new array, don't edit the existing one in place.
 ###Example: 
     var oneTo5 = [1,2,3,4,5];
     map(oneTo5, function (x) { return x * 2 }); -> [2,4,6,8,10]
