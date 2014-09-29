@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="outer">
+    Outer text
+    <div id="inner1">
+        inner1 text
+        <div id="inner2">
+            inner2 text
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById("outer").addEventListener("click",
+        function(event, foo){
+            console.log("outer clicked");
+            console.log(this);
+            console.log(event.target);
+            // these are the same in this case but don't have to be.
+        });        
+    document.getElementById("inner1").addEventListener("click",
+        function(){
+            console.log("inner1 clicked first");
+        });
+    document.getElementById("inner1").addEventListener("click",
+        function(){
+            console.log("inner1 clicked second");
+        }/*, true*/);
+ 
+    document.getElementById("inner2").addEventListener("click",
+        function(){
+            console.log("inner2 clicked first");
+        });
+    document.getElementById("inner2").addEventListener("click",
+        function(){
+            console.log("inner2 clicked second");
+            //event.stopPropagation();
+        });
+
+</script>
+</body>
+</html>
