@@ -1,6 +1,6 @@
 <p><link href="../stylesheets/GitHub2.css" rel="stylesheet"></link></p>
 
-<h2>SSUI- 05/433D Web Lab</h2>
+<h2>SSUI-05/633D Web Lab</h2>
 
 <h1>Project 3:</h1>
 
@@ -29,7 +29,7 @@
 
 <h3>StateMachine Specification</h3>
 
-<p>For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. Each state has a list of outgoing transitions. For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an ‘action’) which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
+<p>For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. Each state has a list of outgoing transitions. For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an 'action') which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
 parameter specifying the element this state machine is attached to (so that your functions can make modifications to the elements themselves).</p>
 
 <p>Below is an example of part of a state machine specification for a draggable element. The state machine description is also provided for you in statemachinetest.js:</p>
@@ -37,18 +37,18 @@ parameter specifying the element this state machine is attached to (so that your
 <pre><code>var sampleDescription = { states: [{
     name: "start",
     transitions: [ {
-        input: "mouseDown",
+        input: "mousedown",
         action: record_down_location,
         endState: "down"
     }]    
 }, {
     name: "down",
     transitions: [ {
-        input: "mouseUp",
+        input: "mouseup",
         action: do_drop,
         endState: "start"
     }, {
-        input: "mouseMove",
+        input: "mousemove",
         action: move_icon,
         endState: "down"
     }]
@@ -68,7 +68,7 @@ parameter specifying the element this state machine is attached to (so that your
 <p>Methods:</p>
 
 <ul>
-<li>updateState(input<em>event, input</em>type): Updates the current state given input, using the state machine table</li>
+<li>updateState(input_event, input_type): Updates the current state given input, using the state machine table</li>
 </ul>
 
 <p>Fields:</p>
@@ -79,33 +79,32 @@ parameter specifying the element this state machine is attached to (so that your
 
 <h3>State Machine Input Events</h3>
 
-<p>Your state machine will need to translate raw input events into strings like “mouseDown”, “mouseUp” for interpretation by the state machine. Your statemachine must respond to the following events:</p>
+<p>Your state machine will need to translate raw input events into strings like "mousedown", "mouseup" for interpretation by the state machine. Your statemachine must respond to the following events:</p>
 
 <ul>
-<li>mouseDown: The mouse button was pressed down over this object.</li>
-<li>mouseUp: The mouse button was released over the object.</li>
+<li>mousedown: The mouse button was pressed down over this object.</li>
+<li>mouseup: The mouse button was released over the object.</li>
 <li>click: The object was clicked.</li>
-<li>mouseMove: The mouse has moved over the object.</li>
-<li>mouseIn: The mouse has entered the object.</li>
-<li>mouseOut: The mouse has left the object.</li>
-<li>keyPress: A key was pressed.</li>
-<li>timerTick30Ms: A timer that goes off every 30 milliseconds has gone off (useful for animations)</li>
+<li>mousemove: The mouse has moved over the object.</li>
+<li>mouseenter: The mouse has entered the object.</li>
+<li>mouseleave: The mouse has left the object.</li>
+<li>keypress: A key was pressed.</li>
+<li>timertick30ms: A timer that goes off every 30 milliseconds has gone off (useful for animations)</li>
 </ul>
+
+<p>Relevant spec: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">here is a full list</a> of events that the browser will send you. (btw, it says the parameter is case insensitive, but I found it to be case sensitive.) Your state machine only has to respond to the eight above. (well, the seven plus timertick30ms, which you have to fire yourself.)</p>
 
 <h2>Testing Your State Machine</h2>
 
-<p>You are given one simple state machine to test out your code on. This state machine makes the div “myDiv” draggable. Additionally, when the div is pressed it should turn blue. Finally, the state machine logs each of its transitions to the console for debugging purposes.</p>
+<p>You are given one simple state machine to test out your code on. This state machine makes the div "myDiv" draggable. Additionally, when the div is pressed it should turn blue. Finally, the state machine logs each of its transitions to the console for debugging purposes.  You should write at least 5 more tests to test out whether your code works. These tests can be simple, such as the draggable div in the testing code, or more interesting, such as an implementation of a simple fighting game (key combinations could let your characters do cool moves). Another idea for a test would be to do a complex and interesting animation sequence, as you can track what part of the sequence you're in using a state machine. Note that your sample doesn't have to be one giant state machine. You can have several state machines in one sample. In fact, one of your tests must have more than one state machine to test how having multiple state machines in 1 HTML file affects your result.  </p>
 
-<p>You should write at least 5 more tests to test out whether your code works. These tests can be simple, such as the draggable div in the testing code, or more interesting, such as an implementation of a simple fighting game (key combinations could let your characters do cool moves). Another idea for a test would be to do a complex and interesting animation sequence, as you can track what part of the sequence you’re in using a state machine. Note that your sample doesn’t have to be one giant state machine. You can have several state machines in one sample. In fact, one of your tests must have more than one state machine to test how having multiple state machines in 1 HTML file affects your result.</p>
+<p>Additionally, you can make your HTML page as interesting as you'd like (for example, you can add an interesting background to set the scene for a fighting game). You are free to use jQuery to make animations or to simplify development, but be warned, this might make your life more complicated!</p>
 
-<p>Additionally, you can make your HTML page as interesting as you’d like (for example, you can add an interesting background to set the scene for a fighting game). You are free to use jQuery to make animations or to simplify development, however be warned, this might make your life more complicated!</p>
-
-<p>The sample test code only responds to mouseDown, mouseUp, mouseMove, and mouseOut events. Collectively, your tests should test each of the input events described above. This doesn’t mean that you need to test every input event type per test, but means that across all tests, you must cover every input event type.
-Additionally, each of your tests must implement at least 3 actions (functions that do something on a transition), but for more interesting tests, you will probably want to have more than just 3 actions.</p>
+<p>The sample test code only responds to mousedown, mouseup, mousemove, and mouseleave events. Collectively, your tests should test each of the input events described above. This doesn't mean that you need to test every input event type per test, but means that across all tests, you must cover every input event type.  Additionally, each of your tests must implement at least 3 actions (functions that do something on a transition), but for more interesting tests, you will probably want to have more than just 3 actions.</p>
 
 <h2>Bells and Whistles</h2>
 
-<p>Completing the above requirements and having well-­‐documented code with no errors will get you 45 out of 50 points, which is an A. You must complete one of the below ‘bells and whistles’ to get full points. You can complete as many of these as you want, but you will get no more than 10 points total. Different bonuses are worth different numbers of points, based on difficulty. You may receive up to 10 points for bells and whistles, bringing you up to up to 5 extra credit points.</p>
+<p>Completing the above requirements and having well-documented code with no errors will get you 45 out of 50 points, which is an A. You must complete one of the below 'bells and whistles' to get full points. You can complete as many of these as you want, but you will get no more than 10 points total. Different bonuses are worth different numbers of points, based on difficulty. You may receive up to 10 points for bells and whistles, bringing you up to up to 5 extra credit points.  </p>
 
 <ol>
 <li>Make an interesting game as one of your tests (up to 10 points): State machines are particularly useful for making games where you need to use keyboard combinations (think Street Fighter), or for making puzzles where you need to a set of things in the correct order to unlock a door. Make one of your tests an interesting game that uses state machines to track state for up to 10 points.</li>
@@ -124,14 +123,14 @@ Additionally, each of your tests must implement at least 3 actions (functions th
 <p>This project has the same procedure as Projects 0, 1, and 2. Make sure to include the following files:</p>
 
 <ul>
-<li>statemachine.js: Your state machine implementation</li>
-<li>statemachine-test1.html and .js: ￼Your first state machine test.</li>
-<li>statemachine-test2.html and .js: ￼Your second state machine test.</li>
-<li>statemachine-test3.html and .js: ￼Your third state machine test.</li>
-<li>statemachine-test4.html and .js: ￼Your fourth state machine test.</li>
-<li>statemachine-test5.html and .js: ￼Your fifth state machine test.</li>
-<li>README.txt: ￼￼￼Describe your project as in previous projects.</li>
-<li>If you do any bells and whistles, also include the testing files for those bells and whistles. Make sure your README file includes any extra documentation about any extra things you did. Also, include any questions or difficulties you had. If something doesn’t work, please also include this in the README file.</li>
+<li>statemachine.js:Your state machine implementation</li>
+<li>statemachine-test1.html and .js: Your first state machine test.</li>
+<li>statemachine-test2.html and .js: Your second state machine test.</li>
+<li>statemachine-test3.html and .js: Your third state machine test.</li>
+<li>statemachine-test4.html and .js: Your fourth state machine test.</li>
+<li>statemachine-test5.html and .js: Your fifth state machine test.</li>
+<li>README.txt: Describe your project as in previous projects.</li>
+<li>If you do any bells and whistles, also include the testing files for those bells and whistles. Make sure your README file includes any extra documentation about any extra things you did. Also, include any questions or difficulties you had. If something doesn't work, please also include this in the README file.</li>
 </ul>
 
 <h2>Grading</h2>
