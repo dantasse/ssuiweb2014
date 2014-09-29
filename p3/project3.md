@@ -4,13 +4,13 @@
 Implementing a General State Machine in JavaScript
 
 ### Due: Wednesday, October 22, 2014 by 8:00 pm
-Your goal for this project will be to build general state-tracking system (a state machine) as described in SSUI lecture (the PowerPoint slides for this are attached for your reference, see slide 11). The purpose of building a finite state machine is to simplify the task of building complex interactive elements such as resizable and draggable options. Because interactions with elements such as resizable icons occur over time, interactive elements must save their current state to reflect this input over time.
+Your goal for this project will be to build general state-tracking system (a state machine) as described in SSUI lecture. The purpose of building a finite state machine is to simplify the task of building complex interactive elements such as resizable and draggable options. Because interactions with elements such as resizable icons occur over time, interactive elements must save their current state to reflect this input over time.
 
 ##Files Provided
 - [statemachinetest.js](statemachinetest.js) - JavaScript file that has one simple test of your state machine.
 - [statemachinetest.html](statemachinetest.html) - HTML file that goes with statemachinetest.js
 - [statemachine-starter.js](statemachine-starter.js) - Basic skeleton code you can optionally start from.
-- [week07-2013.pptx](week07-2013.pptx) - a lecture from a previous year of this class that explains state machines in more detail. 
+- [p3.zip](p3.zip) - All of the above, in a zip file.
 
 ##Project Overview
 You will be creating a StateMachine object that models a state machine. Each state machine class can be attached to a DOM Element object (header, div, etc). The StateMachine Javascript object will specify the states in your state machine, as well as transitions. The start state of your state machine will be the first state in your state list. When input occurs on any attached elements, the state machine will need to transition to a new state according to the input, and execute any functions necessary.
