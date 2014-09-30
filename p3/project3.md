@@ -19,7 +19,7 @@ Your state machine should be able to take in any valid state machine specificati
 
 ##Detailed Specification
 ###StateMachine Specification
-For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. Each state has a list of outgoing transitions. For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an 'action') which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
+For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. You can assume the states have unique names. Each state has a list of outgoing transitions (which you can also assume are unique; you won't have two transitions both from A to B). For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an 'action') which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
 parameter specifying the element this state machine is attached to (so that your functions can make modifications to the elements themselves).
 
 Below is an example of part of a state machine specification for a draggable element. The state machine description is also provided for you in statemachinetest.js:
@@ -57,9 +57,10 @@ Methods:
 
 - updateState(input\_event, input\_type): Updates the current state given input, using the state machine table
 
-Fields:
+Fields: (it will probably be helpful to have these, but you can implement the internals of your state machine however you want.)
 
-- stateTable: The table the describes the finite state machine. currentState: The current state of the state machine.
+- stateTable: The table the describes the finite state machine. This can be in whatever format you want.
+- currentState: The current state of the state machine.
 
 ### State Machine Input Events
 Your state machine will need to translate raw input events into strings like "mousedown", "mouseup" for interpretation by the state machine. Your statemachine must respond to the following events:
@@ -70,10 +71,10 @@ Your state machine will need to translate raw input events into strings like "mo
 - mousemove: The mouse has moved over the object.
 - mouseenter: The mouse has entered the object.
 - mouseleave: The mouse has left the object.
-- keypress: A key was pressed.
+- keydown: A key on the keyboard was pressed down. (this will be global; your statemachine for any element should respond whenever a key is pressed, no matter where the focus is.)
 - timertick30ms: A timer that goes off every 30 milliseconds has gone off (useful for animations)
 
-Relevant spec: [here is a full list](https://developer.mozilla.org/en-US/docs/Web/Events) of events that the browser will send you. (btw, it says the parameter is case insensitive, but I found it to be case sensitive.) Your state machine only has to respond to the eight above. (well, the seven plus timertick30ms, which you have to fire yourself.)
+Relevant spec: [here is a full list](https://developer.mozilla.org/en-US/docs/Web/Events) of events that the browser will send you. (btw, it says the parameter is case insensitive, but I found it to be case sensitive.) Your state machine only has to respond to the eight above. (well, the seven plus timertick30ms, which you have to fire yourself. [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) may be helpful.)
 
 ## Testing Your State Machine
 

@@ -29,7 +29,7 @@
 
 <h3>StateMachine Specification</h3>
 
-<p>For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. Each state has a list of outgoing transitions. For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an 'action') which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
+<p>For this project, a state machine will be described as a JavaScript object (in JavaScript Object Notation, or JSON). The state machine for this assignment will be described as a list of states. You can assume the states have unique names. Each state has a list of outgoing transitions (which you can also assume are unique; you won't have two transitions both from A to B). For this assignment, the first state in the list of state machines is the start state. Transitions specify a target state (the state to transition to if the input matches), and the input to transition on. For this assignment transitions will also have a function (called an 'action') which represents the function to be executed when the transition is taken. Your action function should take a parameter specifying the event that just happened, as well as a
 parameter specifying the element this state machine is attached to (so that your functions can make modifications to the elements themselves).</p>
 
 <p>Below is an example of part of a state machine specification for a draggable element. The state machine description is also provided for you in statemachinetest.js:</p>
@@ -71,10 +71,11 @@ parameter specifying the element this state machine is attached to (so that your
 <li>updateState(input_event, input_type): Updates the current state given input, using the state machine table</li>
 </ul>
 
-<p>Fields:</p>
+<p>Fields: (it will probably be helpful to have these, but you can implement the internals of your state machine however you want.)</p>
 
 <ul>
-<li>stateTable: The table the describes the finite state machine. currentState: The current state of the state machine.</li>
+<li>stateTable: The table the describes the finite state machine. This can be in whatever format you want.</li>
+<li>currentState: The current state of the state machine.</li>
 </ul>
 
 <h3>State Machine Input Events</h3>
@@ -88,11 +89,11 @@ parameter specifying the element this state machine is attached to (so that your
 <li>mousemove: The mouse has moved over the object.</li>
 <li>mouseenter: The mouse has entered the object.</li>
 <li>mouseleave: The mouse has left the object.</li>
-<li>keypress: A key was pressed.</li>
+<li>keydown: A key on the keyboard was pressed down. (this will be global; your statemachine for any element should respond whenever a key is pressed, no matter where the focus is.)</li>
 <li>timertick30ms: A timer that goes off every 30 milliseconds has gone off (useful for animations)</li>
 </ul>
 
-<p>Relevant spec: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">here is a full list</a> of events that the browser will send you. (btw, it says the parameter is case insensitive, but I found it to be case sensitive.) Your state machine only has to respond to the eight above. (well, the seven plus timertick30ms, which you have to fire yourself.)</p>
+<p>Relevant spec: <a href="https://developer.mozilla.org/en-US/docs/Web/Events">here is a full list</a> of events that the browser will send you. (btw, it says the parameter is case insensitive, but I found it to be case sensitive.) Your state machine only has to respond to the eight above. (well, the seven plus timertick30ms, which you have to fire yourself. <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">CustomEvent</a> may be helpful.)</p>
 
 <h2>Testing Your State Machine</h2>
 
