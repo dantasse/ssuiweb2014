@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- We can src socket.io.js from here b/c of socket.io magic - it makes your
+    web server also serve the socket.io.js for free.-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    // socket.io magic
+    var socket = io();
+
+    socket.on('hello', function (data) {
+      console.log('Got a hello');
+      socket.emit('response', { user: 'dan' });
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+</body>
+</html>
