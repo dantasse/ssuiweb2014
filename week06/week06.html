@@ -6,6 +6,11 @@
         border: 1px solid black;
         padding: 10px;
     }
+    #inner3 {
+      position:absolute;
+      top: 100px;
+      left: 100px;
+    }
 </style>
 </head>
 
@@ -18,36 +23,48 @@
         <div id="inner2">
             inner2 text
         </div>
+        <div id="inner3">
+            inner3 text
+        </div>
     </div>
 </div>
 
+<button id="button1">HELLO </button>
 
 <script>
     document.getElementById("outer").addEventListener("click",
         function(event, foo){
             console.log("outer clicked");
-            console.log(this);
-            console.log(event.target);
+            // console.log(this);
+            // console.log(event.target);
             // these are the same in this case but don't have to be.
         });        
     document.getElementById("inner1").addEventListener("click",
         function(){
-            console.log("inner1 clicked first");
+            console.log("inner1 clicked");
         });
     document.getElementById("inner1").addEventListener("click",
         function(){
-            console.log("inner1 clicked second");
-        }/*, true*/);
+            // console.log("inner1 clicked second");
+        }); // useCapture
  
     document.getElementById("inner2").addEventListener("click",
-        function(){
-            console.log("inner2 clicked first");
+        function(event){
+            console.log("inner2 clicked");
+            event.stopPropagation();
         });
     document.getElementById("inner2").addEventListener("click",
         function(){
-            console.log("inner2 clicked second");
+            // console.log("inner2 clicked second");
             //event.stopPropagation();
         });
+
+    document.getElementById("inner3").addEventListener("click",
+        function(){
+            console.log("inner3 clicked");
+        });
+
+    document.getElementById("button1").addEventListener("click", function() {this.innerText = "blah"});
 
 </script>
 </body>
