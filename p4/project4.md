@@ -25,6 +25,10 @@ Due Thursday, Oct 30. Propose 1-3 topics, each with two paragraphs: a paragraph 
 - Build a useful application, like a photo gallery, a memo, ...
 - Make your personal website much more compelling/interactive (if you already had a website, save an old version of it so I can compare).
 
+If you have an idea, but it's not hard enough, you can make it run nicely on mobile (dealing well with different screen sizes and touch events), or make it a reusable library so other developers can drop it in and use it.
+
+If you have an idea, but you're worried that it's too hard, try to build a realistic failure plan if you can't get it all to work. That is, if you want to do A+B+C+D, then make sure that A+B or A+B+C would each be a good (if less amazing) project.
+
 ## Presentations
 Thursday, Dec. 4th, 10:30-11:50am, SCR 172 (regular place)  
 
@@ -33,7 +37,8 @@ If you can't come because of classes or other reasons, let me know by the end of
 
 ## Turning Your Program In
 
-This project has the same procedure as Projects 0-3. Make sure to include all files that your project requires to run. As before, include a README.txt; on this project, be sure to also describe what you did, because with everyone doing different things it might not be obvious at a glance.
+This project has the same procedure as Projects 0-3. Make sure to include all files that your project requires to run. As before, include a README.txt; on this project, be sure to also describe what you did.
+Also, be sure to cite every library you use, including libraries that you've built yourself previously (if applicable).
 
 Because there's a server portion, you have a few options:
 
