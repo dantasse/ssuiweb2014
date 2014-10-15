@@ -35,32 +35,25 @@ If you have an idea, but you're worried that it's too hard, try to build a reali
 Thursday, Dec. 4th, 10:30-11:50am, SCR 172 (regular place)  
 
 If you can't come because of classes or other reasons, let me know by the end of Dec. 3 or you will lose some points. We'll have to set up another time to demo your project for me then.
-4-minute presentation, 1-minute for questions. No slides necessary, just tell us what you built, show us what's cool about it, and talk about the most challenging part.
+4 minute presentation, 1 minute for questions. No slides necessary, just tell us what you built, show us what's cool about it, and talk about the most challenging part.
 
-## Turning Your Program In
+## Turning Your Program In and Demo
 
 This project has the same procedure as Projects 0-3. Make sure to include all files that your project requires to run. As before, include a README.txt.
 Also, be sure to cite every library you use, including libraries that you've built yourself previously (if applicable).
 
-Ideally I'd be able to run it; if you want, you can do one of the following:
-
-- use a Node server, and include a package.json file that shows me which dependencies to install
-- use a python server, and include a requirements.txt file; I'll run "virtualenv env/" then "pip install -r requirements.txt" then run your server
-- use whatever other server you want, and include detailed instructions in the README.txt for me to set it up myself
-- run a server yourself (any way you want) and have your project point to it. Heroku (free plan) or App Engine are not bad for this, AWS might work, or you can just run it on your machine and keep it on.
-
-(but also I'll be reading your code so if you can't do this, all is not lost. I'll just be more easily wowed if it runs.)
+You'll also demo your code for me, so I can grade it. I'll try to be pickier than your classmates, test edge cases, etc. We'll have a sign up sheet for 15-minute time slots after the class demos.
 
 ##Grading
 
 100 points:
 
-- 60 points: Peer evaluation
+- 60 points: Peer evaluation (based on class demos)
   - based on technical implementation and presentation, as follows:
   - Client-side technical difficulty and coolness: 30 pts
   - Server-side technical difficulty and coolness: 10 pts
   - Presentation/polish: 20 pts
-- 30 points: TA evaluation
+- 30 points: TA evaluation (based on TA demo)
   - Client-side technical difficulty and coolness: 20 pts
   - Server-side technical difficulty and coolness: 10 pts
     - I'll estimate how hard I think your project will be as part of the proposal feedback.
