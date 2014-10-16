@@ -55,7 +55,7 @@ Constructor Parameters (in this order):
 
 Methods:
 
-- updateState(input\_event, input\_type): Updates the current state given input, using the state machine table
+- updateState(input\_event): Updates the current state given input, using the state machine table
 
 Fields: (it will probably be helpful to have these, but you can implement the internals of your state machine however you want.)
 
