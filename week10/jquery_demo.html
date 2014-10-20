@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- The block moving code is modified from jQuery website http://api.jquery.com/stop/ -->
+
+<html>
+  <head>
+    <title>jQuery Demo</title>
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        console.log("window.onload fired");
+      };
+
+      $(document).ready(function() {
+        console.log("document.ready fired");
+        
+        var h1s = $("h1");
+        for (var i = 0; i < h1s.length; i++) {
+          var h1 = h1s[i];
+          h1.style.color="red";
+        }
+        // let the divs fade out and in
+        $("div").fadeOut(3000).fadeIn("slow", 
+          function(){console.log("done! wait...");}
+        ).delay(1000)
+        // let the divs changes color and height
+        .animate({height:"100px"}, function(){console.log("done2")}
+        );
+        
+        // Start animation
+        $( "#go" ).click(function() {
+          $( "div" ).animate({ marginLeft: "100px" }, 2000 );
+        });
+         
+        // Stop animation when button is clicked
+        $( "#stop" ).click(function() {
+          $( "div" ).stop();
+        });
+         
+        // Start animation in the opposite direction
+        $( "#back" ).click(function() {
+          $( "div" ).animate({ marginLeft: "0px" }, 2000 );
+        });
+        
+            
+        // iterate through each item. Append "test"+index to each hi 
+        // animations are asynchronous. so this part doesn't wait for the animations to finish to run 
+        $("h1").each(function(index, element) {
+                    $(element).append(" TEST"+index); 
+                });
+        // if you don't care about the 
+        $("hi").append("!");
+        
+      });
+    
+    </script>
+  </head>
+  <body>
+    <h1>Title 1
+      <h1>Title 2</h1>
+    </h1>
+    <h1>Title 3</h1>
+        
+    <button id="go">Go</button>
+    <button id="stop">STOP!</button>
+    <button id="back">Back</button>
+        
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+        
+    <!--
+    uncomment this img if you want to see the difference between document.ready
+    and window.onload. $(document).ready happens when DOM is loaded, but before
+    all the images involved are loaded. window.onload happens after both.
+    More: http://www.dotnetbull.com/2013/08/document-ready-vs-window-onload.html
+    -->
+    <!--
+    <img src="http://upload.wikimedia.org/wikipedia/commons/3/3d/LARGE_elevation.jpg" />
+    -->
+  </body>
+</html>
