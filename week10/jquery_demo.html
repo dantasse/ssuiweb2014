@@ -8,52 +8,65 @@
         
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <script type="text/javascript">
+
       window.onload = function() {
         console.log("window.onload fired");
       };
 
+      // this is the same as the document.ready bit below
+      $(function() {
+        console.log("document.ready fired");
+      });
+      
       $(document).ready(function() {
         console.log("document.ready fired");
-        
-        var h1s = $("h1");
-        for (var i = 0; i < h1s.length; i++) {
-          var h1 = h1s[i];
-          h1.style.color="red";
-        }
+      });
+      
+      $(document).ready(function() {
+        $("h1").css({color: "green", padding: '10px'}).before("<hr />").after("<hr />");
+        console.log($("h1").text());
+        $("#firstItem").data("x", 5);
+        console.log($("#firstItem").data("x"));
+
         // let the divs fade out and in
         $("div").fadeOut(3000).fadeIn("slow", 
-          function(){console.log("done! wait...");}
+          function(){console.log("done fading out...");}
         ).delay(1000)
         // let the divs changes color and height
-        .animate({height:"100px"}, function(){console.log("done2")}
+        .animate({height:"100px"}, function(){console.log("done animating")}
         );
         
         // Start animation
-        $( "#go" ).click(function() {
+        $( "#go" ).click(function(event) {
           $( "div" ).animate({ marginLeft: "100px" }, 2000 );
+          console.log(event);
         });
-         
+ 
         // Stop animation when button is clicked
         $( "#stop" ).click(function() {
           $( "div" ).stop();
         });
-         
+ 
         // Start animation in the opposite direction
         $( "#back" ).click(function() {
           $( "div" ).animate({ marginLeft: "0px" }, 2000 );
         });
-        
-            
-        // iterate through each item. Append "test"+index to each hi 
-        // animations are asynchronous. so this part doesn't wait for the animations to finish to run 
+ 
+        // Iterate through each item. Append "test"+index to each h1 
+        // Animations are asynchronous, so this part doesn't wait for the
+        // animations to finish to run.
         $("h1").each(function(index, element) {
-                    $(element).append(" TEST"+index); 
-                });
-        // if you don't care about the 
-        $("hi").append("!");
+          $(element).append(" TEST"+index); 
+        });
+
+        $.get("http://from.so/web_lab/pgh_weather.php")
+            .success(function(data, status) {
+          var condition = data.getElementsByTagName("condition");
+          var temp = condition[0].getAttribute('temp');
+          $('#firstItem').text(" it is " + temp + " degrees.");
+        });
         
       });
-    
     </script>
   </head>
   <body>
@@ -66,7 +79,8 @@
     <button id="stop">STOP!</button>
     <button id="back">Back</button>
         
-    <div class="item">Item 1</div>
+    <div id="firstItem" class="item">Item 1</div>
+    <hr />
     <div class="item">Item 2</div>
     <div class="item">Item 3</div>
     <div class="item">Item 4</div>
