@@ -51,10 +51,10 @@ You'll also demo your code for me, so I can grade it. I'll try to be pickier tha
 - 60 points: Peer evaluation (based on class demos)
   - based on technical implementation and presentation, as follows:
   - Client-side technical difficulty and coolness: 30 pts
-  - Server-side technical difficulty and coolness: 10 pts
+  - Has a server that works: 10 pts
   - Presentation/polish: 20 pts
 - 30 points: TA evaluation (based on TA demo)
   - Client-side technical difficulty and coolness: 20 pts
-  - Server-side technical difficulty and coolness: 10 pts
+  - Has a server that works: 10 pts
     - I'll estimate how hard I think your project will be as part of the proposal feedback.
 - 10 points: Participation in presentation and peer grading
